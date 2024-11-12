@@ -13,8 +13,7 @@
     "windows": [
       {
         "title": "mochem",
-        "width": 1200,
-        "height": 600
+        "maximized": true
       }
     ],
     "security": {
