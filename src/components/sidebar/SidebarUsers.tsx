@@ -1,4 +1,4 @@
-import AddNewUser from "./AddNewUser";
+import AddNewUser from "@/components/sidebar/AddNewUser";
 
 interface Props {
   children?: React.ReactNode;

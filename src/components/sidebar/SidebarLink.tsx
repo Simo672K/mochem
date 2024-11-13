@@ -4,19 +4,23 @@ interface Props {
   icon: React.ReactNode;
   label: string;
   to: string;
+  shrink?: boolean;
 }
 
-const SidebarLink = ({ icon, label, to }: Props) => {
+const SidebarLink = ({ icon, label, to, shrink }: Props) => {
   return (
-    <li>
+    <li className="block min-w-6">
       <NavLink
         className={({ isActive }) =>
-          cn("flex items-center", isActive && "text-blue-600")
+          cn(
+            "flex items-center hover:text-blue-600",
+            isActive && "text-blue-600"
+          )
         }
         to={to}
       >
         {icon}
-        <span className="ms-4">{label}</span>
+        {!shrink && <span className="ms-4">{label}</span>}
       </NavLink>
     </li>
   );
